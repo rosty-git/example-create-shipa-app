@@ -6,7 +6,7 @@ jobs:
     name: Create shipa app
     steps:
       - name: Create shipa app
-        uses: vmanilo/create-app-action@v1-beta
+        uses: vmanilo/create-app-action@v0.0.1
         env:
           SHIPA_TOKEN: ${{ secrets.SHIPA_TOKEN }}
           SHIPA_HOST: ${{ secrets.SHIPA_HOST }}
