@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  create_shipa_app:
+    runs-on: ubuntu-latest
+    name: Create shipa app
+    steps:
+      - name: Create shipa app
+        uses: vmanilo/create-app-action@v1-beta
+        env:
+          SHIPA_TOKEN: ${{ secrets.SHIPA_TOKEN }}
+          SHIPA_HOST: ${{ secrets.SHIPA_HOST }}
+        with:
+          file-path: 'app.yml'
