@@ -11,4 +11,4 @@ jobs:
           SHIPA_TOKEN: ${{ secrets.SHIPA_TOKEN }}
           SHIPA_HOST: ${{ secrets.SHIPA_HOST }}
         with:
-          file-path: './app.yml'
+          file-path: './example/app.yml'
