@@ -7,10 +7,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Create shipa app
-        uses: vmanilo/create-app-action@v0.0.2
+      - name: Create Shipa App Action
+        uses: rostislavgit/shipa-create-app-action@v0.0.1
         env:
           SHIPA_TOKEN: ${{ secrets.SHIPA_TOKEN }}
           SHIPA_HOST: ${{ secrets.SHIPA_HOST }}
         with:
-          file-path: './example/app.yml'
+          app: './example/app.yml'
+          app-env: './example/app-env.yml'
