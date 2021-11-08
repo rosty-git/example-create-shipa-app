@@ -1,0 +1,12 @@
+app: github-app-v3
+ingress:
+  policy_mode: allow-custom-rules-only
+  custom_rules:
+    - id: gateway
+      enabled: true
+      description: gateway block test
+      allowed_frameworks:
+        - cinema-gateway
+egress:
+  policy_mode: allow-all
+restart_app: false
