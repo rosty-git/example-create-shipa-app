@@ -36,4 +36,4 @@ app-deploy:
   port: 8000
   detach: true
   message: Message
-#  shipayaml: ./example/shipa.yaml
+  shipayaml: ./example/shipa.yaml
