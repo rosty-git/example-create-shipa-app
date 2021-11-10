@@ -13,5 +13,6 @@ jobs:
           SHIPA_TOKEN: ${{ secrets.SHIPA_TOKEN }}
           SHIPA_HOST: ${{ secrets.SHIPA_HOST }}
         with:
-          app: './example/app.yml'
+#          app: './example/app.yml'
+          app-env: './example/app-env.yml'
 #          shipa-action: './example/shipa-action.yml'
