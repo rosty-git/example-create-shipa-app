@@ -21,41 +21,41 @@ framework:
         disableAppPolicies: false
 
 app:
-  name: github-app-v3
+  name: github-app-v5
   teamowner: shipa-team
   framework: aks-prod
 
-app-env:
-  app: github-app-v3
-  envs:
-    - name: CR_ENV1
-      value: test-1
-    - name: CR_ENV3
-      value: test-3
-  norestart: true
-  private: false
-
-network-policy:
-  app: github-app-v3
-  ingress:
-    policy_mode: allow-custom-rules-only
-    custom_rules:
-      - id: gateway
-        enabled: true
-        description: gateway block test
-        allowed_frameworks:
-          - cinema-gateway
-  egress:
-    policy_mode: allow-all
-  restart_app: false
-
-app-deploy:
-  app: github-app-v3
-  image: docker.io/shipasoftware/bulletinboard:1.0
-  steps: 2
-  step-weight: 1
-  step-interval: 3m
-  port: 8000
-  detach: true
-  message: Message
-  shipayaml: ./example/shipa.yaml
+#app-env:
+#  app: github-app-v3
+#  envs:
+#    - name: CR_ENV1
+#      value: test-1
+#    - name: CR_ENV3
+#      value: test-3
+#  norestart: true
+#  private: false
+#
+#network-policy:
+#  app: github-app-v3
+#  ingress:
+#    policy_mode: allow-custom-rules-only
+#    custom_rules:
+#      - id: gateway
+#        enabled: true
+#        description: gateway block test
+#        allowed_frameworks:
+#          - cinema-gateway
+#  egress:
+#    policy_mode: allow-all
+#  restart_app: false
+#
+#app-deploy:
+#  app: github-app-v3
+#  image: docker.io/shipasoftware/bulletinboard:1.0
+#  steps: 2
+#  step-weight: 1
+#  step-interval: 3m
+#  port: 8000
+#  detach: true
+#  message: Message
+#  shipayaml: ./example/shipa.yaml
