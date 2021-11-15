@@ -21,9 +21,9 @@ framework:
         disableAppPolicies: false
 
 app:
-  name: github-app-v5
+  name: github-app-v3
   teamowner: shipa-team
-  framework: aks-prod
+  framework: aks-prod-v1
 
 #app-env:
 #  app: github-app-v3
