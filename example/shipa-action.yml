@@ -1,3 +1,25 @@
+framework:
+  name: github-framework-v1
+  resources:
+    general:
+      setup:
+        provisioner: kubernetes
+      router: traefik
+      appQuota:
+        limit: "4"
+      networkPolicy:
+        ingress:
+          policy_mode: allow-custom-rules-only
+          custom_rules:
+            - id: gateway
+              enabled: true
+              description: gateway block
+              allowed_frameworks:
+                - cinema-gateway
+        egress:
+          policy_mode: allow-all
+        disableAppPolicies: false
+
 app:
   name: github-app-v3
   teamowner: shipa-team

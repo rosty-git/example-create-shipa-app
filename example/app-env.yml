@@ -1,8 +1,0 @@
-app: github-app-v3
-envs:
-  - name: CR_ENV1
-    value: test-1
-  - name: CR_ENV3
-    value: test-3
-norestart: true
-private: false
