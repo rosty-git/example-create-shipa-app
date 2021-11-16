@@ -1,3 +1,17 @@
+cluster:
+  name: github-cluster-1
+  endpoint:
+    addresses: ["https://6447e999-3820-47f4-addf-4acf5faf6522.us-west-1.linodelke.net:443"]
+    caCert: |
+      -----BEGIN CERTIFICATE-----
+      <cert conten>
+      -----END CERTIFICATE-----
+    token: <token content>
+    clientKey: key
+  resources:
+    frameworks:
+      name: ["github-framework-v1"]
+
 framework:
   name: github-framework-v1
   resources:
