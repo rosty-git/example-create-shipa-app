@@ -24,4 +24,4 @@ network-policy:
 app-deploy:
   app: gha-prod-app1
   image: ghcr.io/stefanprodan/podinfo:6.0.3
-  port: 9898
+  port: 8888
