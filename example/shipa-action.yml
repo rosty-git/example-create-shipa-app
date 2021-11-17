@@ -2,11 +2,8 @@ cluster:
   name: github-cluster-1
   endpoint:
     addresses: ["https://6447e999-3820-47f4-addf-4acf5faf6522.us-west-1.linodelke.net:443"]
-    caCert: |
-      -----BEGIN CERTIFICATE-----
-      <cert conten>
-      -----END CERTIFICATE-----
-    token: <token content>
+    caCert: ./example/cert.crt
+    token: ./example/token
     clientKey: key
   resources:
     frameworks:
