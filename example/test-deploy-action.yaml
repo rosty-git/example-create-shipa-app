@@ -1,0 +1,27 @@
+app:
+  name: gha-prod-app1
+  teamowner: shipa-team
+  framework: gha-prod
+
+app-env:
+  app: gha-prod-app1
+  envs:
+    - name: CR_ENV1
+      value: test-1
+    - name: CR_ENV3
+      value: test-3
+  norestart: true
+  private: false
+
+network-policy:
+  app: gha-prod-app1
+  ingress:
+    policy_mode: allow-all
+  egress:
+    policy_mode: allow-all
+  restart_app: false
+
+app-deploy:
+  app: gha-prod-app1
+  image: ghcr.io/stefanprodan/podinfo:6.0.3
+  port: 9898
