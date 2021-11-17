@@ -1,10 +1,10 @@
 app:
-  name: gha-prod-app3
+  name: gha-prod-app4
   teamowner: shipa-team
   framework: gha-prod
 
 network-policy:
-  app: gha-prod-app3
+  app: gha-prod-app4
   ingress:
     policy_mode: allow-all
   egress:
@@ -12,6 +12,6 @@ network-policy:
   restart_app: true
 
 app-deploy:
-  app: gha-prod-app3
+  app: gha-prod-app4
   image: ghcr.io/stefanprodan/podinfo:6.0.3
-  port: 9898
+#  port: 9898
