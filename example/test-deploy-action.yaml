@@ -1,10 +1,27 @@
 app:
-  name: gha-prod-app6
+  name: thu-app1
   teamowner: shipa-team
-  framework: gha-prod
+  framework: thu-1
+
+framework:
+  name: thu-1
+  resources:
+    general:
+      setup:
+        provisioner: kubernetes
+      router: traefik
+      appQuota:
+        limit: "10"
+      networkPolicy:
+        ingress:
+          policy_mode: allow-all
+        egress:
+          policy_mode: allow-all
+        disableAppPolicies: false
+
 
 network-policy:
-  app: gha-prod-app6
+  app: thu-app1
   ingress:
     policy_mode: allow-all
   egress:
@@ -12,6 +29,6 @@ network-policy:
   restart_app: true
 
 app-deploy:
-  app: gha-prod-app6
+  app: thu-app1
   image: ghcr.io/stefanprodan/podinfo:6.0.3
 #  port: 9898
