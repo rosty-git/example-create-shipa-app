@@ -1,9 +1,19 @@
 cluster:
-  name: gha-oke-cl
+  name: gha-oke-test
   endpoint:
     addresses: ["https://132.226.117.181:6443"]
     caCert: ./infra/cert.crt
     token: ./infra/token
   resources:
     frameworks:
-      name: ["gha-policy1"]
+      name: ["vm-test"]
+
+framework:
+  name: vm-test
+  resources:
+    general:
+      setup:
+        provisioner: kubernetes
+      router: traefik
+      appQuota:
+        limit: "10"

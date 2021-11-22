@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Create Shipa App Action
-        uses: rostislavgit/shipa-create-app-action@v0.1.1
+        uses: rostislavgit/shipa-create-app-action@v0.1.2
         env:
           SHIPA_TOKEN: ${{ secrets.SHIPA_TOKEN }}
           SHIPA_HOST: ${{ secrets.SHIPA_HOST }}
