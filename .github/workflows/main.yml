@@ -13,4 +13,4 @@ jobs:
           SHIPA_TOKEN: ${{ secrets.SHIPA_TOKEN }}
           SHIPA_HOST: ${{ secrets.SHIPA_HOST }}
         with:
-          shipa-action: './example/test-deploy-action.yaml'
+          shipa-action: './infra/cluster-def.yml'

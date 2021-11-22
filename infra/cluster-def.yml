@@ -1,0 +1,9 @@
+cluster:
+  name: gha-oke-cl
+  endpoint:
+    addresses: ["https://132.226.117.181:6443"]
+    caCert: ./infra/cert.crt
+    token: ./infra/token
+  resources:
+    frameworks:
+      name: ["gha-policy1"]
