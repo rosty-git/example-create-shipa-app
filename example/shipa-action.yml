@@ -47,8 +47,8 @@ app-env:
 
 app-cname:
   app: github-app-v4
-  cname: cname-secure-true.app
-  encrypt: true
+  cname: app-v4.io
+  encrypted: true
 
 network-policy:
   app: github-app-v4
