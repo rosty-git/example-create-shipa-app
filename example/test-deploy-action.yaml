@@ -31,4 +31,9 @@ network-policy:
 app-deploy:
   app: thu-app1
   image: ghcr.io/stefanprodan/podinfo:6.0.3
-  port: 9898
+  appConfig:
+    team: shipa-team
+    framework: thu-1
+  port:
+    number: 9898
+    protocol: TCP
